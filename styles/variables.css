@@ -1,0 +1,9 @@
+:root {
+  --clr-gray-700: oklch(32.11% 0 0);
+  --clr-gray-800: oklch(23.76% 0 0);
+  --clr-gray-900: oklch(19.3% 0 0);
+
+  --clr-white: hsl(0, 0%, 100%);
+
+  --clr-green: oklch(91.21% 0.217 123.9);
+}

@@ -1,0 +1,144 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: var(--clr-gray-900);
+  font-family: "inter";
+}
+
+.card {
+  width: 20.438rem;
+  background-color: var(--clr-gray-800);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--clr-white);
+  letter-spacing: 0px;
+  row-gap: var(--sp-300);
+  padding: var(--sp-300);
+  border-radius: 12px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.card__img {
+  width: 100%;
+  height: auto;
+  max-width: 5.5rem;
+  border-radius: 50%;
+}
+
+.card__header {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  row-gap: var(--sp-50);
+}
+
+.card__title {
+  font-size: var(--fs-24);
+  font-family: "inter";
+  font-weight: bold;
+  color: oklch(100% 3.5594404384177905e-8 106.37411429114086);
+  transition: color 0.5s ease;
+}
+
+.card__location {
+  color: var(--clr-green);
+  font-size: var(--fs-14);
+  font-family: "inter";
+  transition: color 0.5s ease;
+}
+.card__desc {
+  font-size: var(--fs-14);
+  color: oklch(100% 3.5594404384177905e-8 106.37411429114086);
+  transition: color 0.5s ease;
+}
+
+.card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px;
+  row-gap: var(--sp-200);
+}
+
+.card__list-link {
+  background-color: var(--clr-gray-700);
+  border-radius: 8px;
+  height: 2.813rem;
+  display: grid;
+  place-items: center;
+  font-family: "inter";
+  font-weight: bold;
+  font-size: var(--fs-14);
+}
+
+.card__list-link:hover {
+  background-color: var(--clr-green);
+  color: black;
+  transform: scale(1.05);
+  transition: 1s;
+}
+
+/* Slider style */
+.theme {
+  width: 95%;
+}
+
+#hue-brightness-slider {
+  -webkit-appearance: none;
+  border-radius: 12px;
+}
+
+#hue-brightness-slider::-webkit-slider-runnable-track {
+  background: var(--clr-white);
+  height: 5px;
+  border-radius: 12px;
+}
+
+#hue-brightness-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 35px;
+  width: 35px;
+  margin-top: -15px;
+  background-image: url("/assets/images/favicon-32x32.png");
+  background-size: contain;
+}
+
+.slider-value {
+  color: var(--clr-green);
+  font-weight: 600;
+}
+
+/* links */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--clr-white);
+}
+.attribution a {
+  color: hsl(228, 45%, 64%);
+}
+
+/* Screen size's */
+
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 28.5rem;
+    padding: var(--sp-500);
+  }
+
+  .slider-value {
+    font-size: var(--fs-24);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 24rem;
+  }
+}

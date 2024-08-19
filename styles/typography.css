@@ -1,0 +1,26 @@
+:root {
+  --fs-14: 0.875rem;
+  --fs-24: 1.5rem;
+}
+
+@font-face {
+  font-family: "inter";
+  font-display: swap;
+  font-weight: 400 700;
+  src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format("truetype");
+}
+
+/* @font-face {
+  font-family: "inter-regular";
+  src: url(/assets/fonts/static/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: "inter-semibold";
+  src: url(/assets/fonts/static/Inter-Bold.ttf);
+}
+
+@font-face {
+  font-family: "inter-bold";
+  src: url(/assets/fonts/static/Inter-Bold.ttf);
+} */
