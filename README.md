@@ -1,93 +1,119 @@
-# Frontend Mentor - Social links profile
+# Frontend Mentor - Social links profile solution
 
-![Design preview for the Social links profile coding challenge](./preview.jpg)
+This is a solution to the [Social links profile challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+## Overview
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this social links profile and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to: 
+Users should be able to:
 
 - See hover and focus states for all interactive elements on the page
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](/Social%20links%20profile%20screenshot.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+### Links
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+- Solution URL: [Stroudy Solution](https://github.com/Stroudy/FEM-Social-links-profile)
+- Live Site URL: [Git Hub pages live site](https://stroudy.github.io/FEM-Social-links-profile/)
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+## My process
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+### Built with
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Semantic HTML5 markup
+- CSS custom properties
+- Javascript
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
 
-## Building your project
+### What I learned
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+I explored the mobile-first approach using vanilla CSS, experimenting with multiple stylesheets and the cascade. I implemented a variable font instead of multiple static fonts, improving efficiency. I also reinforced the importance of using `<a>` tags for navigation over `<button>` for better semantic structure.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+I encountered issues with automatic bolding of `<h1>` tags, which I resolved using dev tools. Working with typography in Figma was challenging as it listed font weights by name instead of numeric value. I added a color slider for extra practice and to deepen my understanding.
 
-## Deploying your project
+I structured my media queries for tablet and desktop but started with mobile-first. Using JS for the first time was challenging, but with some guidance from ChatGPT, I ensured I understood the structure and functionality. I organized my CSS into multiple files, linked appropriately, to establish good coding habits for larger projects.
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+I also learned the importance of using relative paths instead of absolute paths when working with GitHub Pages. Overall, this small project taught me a lot, and experimenting freely made it enjoyable.
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+HTML, Using links instead of buttons for screen readers:
+```html
+<ul class="card__list">
+        <li class="card__list-link"><a>GitHub</a></li>
+        <li class="card__list-link"><a>Frontend Mentor</a></li>
+        <li class="card__list-link"><a>LinkedIn</a></li>
+        <li class="card__list-link"><a>Twitter</a></li>
+        <li class="card__list-link"><a>Instagram</a></li>
+      </ul>
+```
+CSS, First silder styling
+```css
+#hue-brightness-slider {
+  -webkit-appearance: none;
+  border-radius: 12px;
+}
 
-## Create a custom `README.md`
+#hue-brightness-slider::-webkit-slider-runnable-track {
+  background: var(--clr-white);
+  height: 5px;
+  border-radius: 12px;
+}
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+#hue-brightness-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 35px;
+  width: 35px;
+  margin-top: -15px;
+  background-image: url("../assets/images/favicon-32x32.png");
+  background-size: contain;
+}
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+.slider-value {
+  color: var(--clr-green);
+  font-weight: 600;
+}
+```
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+JavaScript, Enjoyed using this playing around with it
+```js
+const slider = document.querySelector("#hue-brightness-slider");
+const sliderValueDisplay = document.querySelector("#slider-value");
 
-## Submitting your solution
+slider.addEventListener("input", () => {
+  const sliderValue = slider.value;
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+  let cardColor;
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+  const grayToGreenRatio = sliderValue / 100;
 
-## Sharing your solution
+  const lightness = 23.76 + (65.21 - 23.76) * grayToGreenRatio;
 
-There are multiple places you can share your solution:
+  const hue = 106.37 + (115.395 - 106.37) * grayToGreenRatio;
 
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+  const chroma = 0 + 0.19 * grayToGreenRatio;
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+  cardColor = `oklch(${lightness}% ${chroma} ${hue})`;
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+  document.querySelector(".card").style.backgroundColor = cardColor;
 
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+  sliderValueDisplay.textContent = sliderValue;
+});
+```
