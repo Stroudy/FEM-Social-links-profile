@@ -104,7 +104,7 @@ body {
   height: 35px;
   width: 35px;
   margin-top: -15px;
-  background-image: url("/assets/images/favicon-32x32.png");
+  background-image: url("../assets/images/favicon-32x32.png");
   background-size: contain;
 }
 
