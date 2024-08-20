@@ -74,13 +74,36 @@ body {
   font-family: "inter";
   font-weight: bold;
   font-size: var(--fs-14);
+  color: black;
 }
 
 .card__list-link:hover {
   background-color: var(--clr-green);
-  color: black;
   transform: scale(1.05);
   transition: 1s;
+}
+
+/* link dec */
+
+.card__list-link a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card__list-link a:link {
+  text-decoration: none;
+}
+
+.card__list-link a:visited {
+  color: var(--clr-white);
+}
+.card__list-link a:hover {
+  color: black;
+}
+
+.card__list-link a:active {
+  color: black;
 }
 
 /* Slider style */
@@ -111,6 +134,8 @@ body {
 .slider-value {
   color: var(--clr-green);
   font-weight: 600;
+  display: flex;
+  justify-content: center;
 }
 
 /* links */
